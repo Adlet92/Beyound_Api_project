@@ -1,7 +1,7 @@
-import { routes } from "@shared/config/routes";
 import { Button, Card, Form, Input, Row } from "antd";
 import { Link } from "atomic-router-react";
 import { useUnit } from "effector-react";
+import { routes } from "../../shared/config/routes";
 import { signInFx } from "./model";
 
 export const SignIn = () => {

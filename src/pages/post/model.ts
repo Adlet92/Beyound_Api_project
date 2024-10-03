@@ -1,11 +1,11 @@
-import { getPostById, updatePost } from "@shared/api/posts";
-import { routes } from "@shared/config/routes";
+import { chainRoute } from "atomic-router";
+import { createEffect, restore, sample } from "effector";
+import { getPostById, updatePost } from "../../shared/api/posts/index";
+import { routes } from "../../shared/config/routes";
 import {
   showErrorNotificationFx,
   showSuccessNotificationFx,
-} from "@shared/notification";
-import { chainRoute } from "atomic-router";
-import { createEffect, restore, sample } from "effector";
+} from "../../shared/notification";
 
 export const currentRoute = routes.private.post;
 

@@ -1,8 +1,8 @@
-import { getPosts } from "@shared/api/posts";
-import { routes } from "@shared/config/routes";
-import { showErrorNotificationFx } from "@shared/notification";
 import { chainRoute } from "atomic-router";
 import { combine, createEffect, createEvent, restore, sample } from "effector";
+import { getPosts } from "../../shared/api/posts/index";
+import { routes } from "../../shared/config/routes";
+import { showErrorNotificationFx } from "../../shared/notification";
 
 export const currentRoute = routes.private.posts;
 

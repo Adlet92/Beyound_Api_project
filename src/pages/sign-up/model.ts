@@ -1,9 +1,9 @@
-import { signUp } from "@shared/api/auth";
-import { $token, tokenRecived } from "@shared/auth";
-import { routes } from "@shared/config/routes";
-import { showErrorNotificationFx } from "@shared/notification";
 import { redirect } from "atomic-router";
 import { createEffect, sample } from "effector";
+import { signUp } from "../../shared/api/auth/index";
+import { $token, tokenRecived } from "../../shared/auth/index";
+import { routes } from "../../shared/config/routes";
+import { showErrorNotificationFx } from "../../shared/notification";
 
 export const currentRoute = routes.auth.signUp;
 
