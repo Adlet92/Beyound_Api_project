@@ -1,8 +1,8 @@
-import { BaseLayout } from "@shared/components/BaseLayout";
-import { routes } from "@shared/config/routes";
 import { Card, Flex, Input, Pagination, Space, Spin } from "antd";
 import { Link } from "atomic-router-react";
 import { useUnit } from "effector-react";
+import { BaseLayout } from "../../shared/components/BaseLayout/index";
+import { routes } from "../../shared/config/routes";
 import { $page, $posts, getPostsFx, pageChanged, searchChanged } from "./model";
 
 export const PostsPage = () => {
