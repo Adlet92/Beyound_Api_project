@@ -1,8 +1,8 @@
-import { BaseLayout } from "@shared/components/BaseLayout";
-import { routes } from "@shared/config/routes";
 import { Button, Card, Flex, Form, Input } from "antd";
 import { Link } from "atomic-router-react";
 import { useUnit } from "effector-react";
+import { BaseLayout } from "../../shared/components/BaseLayout/index";
+import { routes } from "../../shared/config/routes";
 import { $post, getPostFx, updatePostFx } from "./model";
 
 export const PostPage = () => {

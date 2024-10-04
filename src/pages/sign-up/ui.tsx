@@ -5,7 +5,8 @@ import { routes } from "../../shared/config/routes";
 import { signUpFx } from "./model";
 
 export const SignUp = () => {
-  const [signUpPending] = useUnit([signUpFx.pending]);
+  // const [signUpPending] = useUnit([signUpFx.pending]);
+  const [signUp, loading] = useUnit([signUpFx, signUpFx.pending]);
 
   return (
     <Row justify="center">
@@ -19,7 +20,7 @@ export const SignUp = () => {
           wrapperCol={{ span: 16 }}
           style={{ maxWidth: 600 }}
           autoComplete="off"
-          onFinish={signUpFx}
+          onFinish={signUp}
         >
           <Form.Item
             label="Email"
@@ -38,7 +39,7 @@ export const SignUp = () => {
           </Form.Item>
 
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button type="primary" htmlType="submit" loading={signUpPending}>
+            <Button type="primary" htmlType="submit" loading={loading}>
               Submit
             </Button>
           </Form.Item>

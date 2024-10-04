@@ -1,7 +1,7 @@
 import { redirect } from "atomic-router";
 import { createEffect, sample } from "effector";
 import { signIn } from "../../shared/api/auth/index";
-import { $token, tokenRecived } from "../../shared/auth/index";
+import { $token, tokenReceived } from "../../shared/auth/index";
 import { routes } from "../../shared/config/routes";
 import { showErrorNotificationFx } from "../../shared/notification";
 
@@ -15,7 +15,7 @@ sample({
   fn(_, clk) {
     return clk.accessToken;
   },
-  target: tokenRecived,
+  target: tokenReceived,
 });
 
 redirect({
