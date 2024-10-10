@@ -3,19 +3,21 @@ import { Link } from "atomic-router-react";
 import { useUnit } from "effector-react";
 import { routes } from "../../shared/config/routes";
 import { signUpFx } from "./model";
+import "./SignUp.css";
 
 export const SignUp = () => {
   // const [signUpPending] = useUnit([signUpFx.pending]);
   const [signUp, loading] = useUnit([signUpFx, signUpFx.pending]);
 
   return (
-    <Row justify="center">
+    <Row justify="center" className="main">
       <Card
         extra={<Link to={routes.auth.signIn}>Already have account?</Link>}
         title="Sign Up"
       >
         <Form
           name="basic"
+          className="signup-form"
           labelCol={{ span: 8 }}
           wrapperCol={{ span: 16 }}
           style={{ maxWidth: 600 }}
@@ -27,7 +29,7 @@ export const SignUp = () => {
             name="email"
             rules={[{ required: true, message: "Please input your username!" }]}
           >
-            <Input />
+            <Input className="input-signup" placeholder="Enter your email" />
           </Form.Item>
 
           <Form.Item
@@ -35,11 +37,15 @@ export const SignUp = () => {
             name="password"
             rules={[{ required: true, message: "Please input your password!" }]}
           >
-            <Input.Password />
+            <Input.Password className="input-signup" placeholder="Enter your password"/>
           </Form.Item>
 
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button type="primary" htmlType="submit" loading={loading}>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="btn-signup"
+              loading={loading}>
               Submit
             </Button>
           </Form.Item>
